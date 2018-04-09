@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MapDemo</string>
+    <string name="main_activity_title_1">显示我的位置</string>
+    <string name="main_activity_title_2">Devil单车</string>
+    <string name="title_activity_get_my_location">GetMyLocationActivity</string>
+</resources>
