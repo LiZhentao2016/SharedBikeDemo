@@ -1,1 +1,1 @@
-include ':app', ':zxing-simplify'
+include ':app', ':zxing-simplify', ':library'

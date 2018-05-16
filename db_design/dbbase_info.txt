@@ -1,0 +1,88 @@
+create database db_sharedbike;
+
+use db_sharedbike;
+
+
+///////////////////////////////用户表
+create table user_info(
+id int unsigned auto_increment primary key,
+username varchar(20) not null,
+password varchar(20) not null,
+phonenum varchar(20) not null,
+email varchar(25) not null,
+money double not null default 0.0,
+minutes int not null default 0
+);
+
+insert user_info (username, password, phonenum, email) values('devilmaycry', '0123456789', '15998253974', '812839668@qq.com');
+insert user_info (username, password, phonenum, email) values('devilabc123', '0123456789', '15998253976', '812839669@qq.com');
+insert user_info (username, password, phonenum, email) values('devilabc456', '0123456789', '15998253978', '812839660@qq.com');
+
+
+
+///////////////////////////////自行车表
+create table bike_info(
+id int unsigned auto_increment primary key,
+category varchar(1) not null,
+lat double not null default 0.0,
+lon double not null default 0.0,
+state int not null default 1
+);
+
+insert bike_info (category, lat, lon) values('1', 39.083746, 121.813489);
+insert bike_info (category, lat, lon) values('1', 39.083746, 121.813589);
+insert bike_info (category, lat, lon) values('1', 39.083646, 121.813689);
+insert bike_info (category, lat, lon) values('1', 39.083346, 121.813189);
+insert bike_info (category, lat, lon) values('1', 39.083946, 121.813089);
+
+
+
+///////////////////////////////订单表
+create table order_info(
+id int unsigned auto_increment primary key,
+user_id int,
+bike_id int,
+take_time   datetime not null default "1990-01-01 1:1",
+return_time datetime not null default "1990-01-01 1:1",
+foreign key(user_id) references user_info(id),
+foreign key(bike_id) references bike_info(id)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+insert order_info (user_id, bike_id，take_time) values(1, 1, "2018-01-01 1:1");
+
+
+
+////////////////////////////消息推荐表
+create table message_info(
+id int unsigned auto_increment primary key,
+title varchar(200) not null,
+pub_date datetime not null default "1990-01-01 1:1",
+pub_url varchar(200) not null
+)default charset=utf8;
+
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "小程序上线 线上购买地铁票省时省力", "https://mobike.com/cn/news/468");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "摩拜单车王晓峰出席《财富》全球论坛：新出行时代已经到来", "https://mobike.com/cn/news/452");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "摩拜单车获颁联合国最高环保奖", "https://mobike.com/cn/news/460");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "共享单车成为交通基础设施 新出行时代到来", "https://mobike.com/cn/news/457");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "摩拜单车与中国信通院达成战略合作 共同推进制订共享单车标准", "https://mobike.com/cn/news/444");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "摩拜成为第四届世界互联网大会唯一共享单车合作伙伴", "https://mobike.com/cn/news/440");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "摩拜单车进入德国柏林 提前实现全球 200 城目标", "https://mobike.com/cn/news/430");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "摩拜单车落地澳大利亚悉尼 智能调度缓解交通承压点", "https://mobike.com/cn/news/407");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "美国总统特朗普访华首日成果：摩拜单车与陶氏化学签订战略合作协议", "https://mobike.com/cn/news/395");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "摩拜携手中国通信工业协会、中国信通院等制定发布首个物联网共享单车系统团体标准", "https://mobike.com/cn/news/401");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "Prophet 铂慧年度品牌 50 强：摩拜单车成唯一上榜互联网出行企业", "https://mobike.com/cn/news/374");
+insert message_info (pub_date, title, pub_url) values("2018-01-01 1:1", "摩拜单车进入韩国水原市 继续引领中国创新出海", "https://mobike.com/cn/news/385");
+
+
+网络连接：
+1. 用户登录             login_validate   #网络中断判断已加入
+2. 开车的车位上传       bike_num         #网络中断判断已加入
+3. 附近车位下载         bike_position    #网络中断判断已加入
+4. 用户信息	        user_name       #网络中断判断已加入
+5. 充值			money_add	 #网络中断判断已加入
+6. 信息修改		user_info_changed  #网络中断判断已加入
+7. 消息获取             message_push_request #网络中断判断已加入
+8. 历史获取		history_push_request #网络中断判断已加入
+9. 结账                 order_finished	     #网络中断判断已加入
+
+

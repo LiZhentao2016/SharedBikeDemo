@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,7 +11,7 @@
         android:layout_height="45dp"
         android:background="@color/yellow"
         android:gravity="center"
-        android:text="Devil's Bike"
+        android:text="共享单车地图"
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold" />
@@ -30,7 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_margin="15dp"
-            android:src="@mipmap/icon_init_location" />
+            android:src="@mipmap/icon_init_location"
+            android:visibility="gone" />
 
         <FrameLayout
             android:id="@+id/flRefresh"
@@ -42,13 +44,15 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/icon_refresh" />
+                android:src="@mipmap/icon_refresh"
+                android:visibility="gone" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@mipmap/rotate_bg" />
+                android:src="@mipmap/rotate_bg"
+                android:visibility="gone" />
         </FrameLayout>
 
 
@@ -69,15 +73,6 @@
             android:textColor="@color/white"
             />
 
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center"
-            android:layout_margin="15dp"
-            android:src="@mipmap/icon_problem" />
 
     </RelativeLayout>
 

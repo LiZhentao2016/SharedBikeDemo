@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/activity_main_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.devil.mapdemo.history.MainOrderActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/yellow"
+            android:gravity="center"
+            android:text="订单状态"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="用户名:"
+            android:id="@+id/XXXXX1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textStyle="normal|bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="25dp">
+        </TextView>
+
+        <TextView
+            android:text="devilmaycry"
+            android:id="@+id/history_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/XXXXX1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:textStyle="normal|bold"
+            android:textSize="16sp">
+        </TextView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="订单号:"
+            android:id="@+id/XXXXX2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal|bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="25dp">
+        </TextView>
+
+        <TextView
+            android:text="1#"
+            android:id="@+id/history_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/XXXXX2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal|bold"
+            android:textSize="16sp">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="所耗时:"
+            android:id="@+id/XXXXX3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal|bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="25dp">
+        </TextView>
+
+        <TextView
+            android:text="1小时10分钟"
+            android:id="@+id/history_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/XXXXX3"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal|bold"
+            android:textSize="16sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="消费额:"
+            android:id="@+id/XXXXX4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal|bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="25dp">
+        </TextView>
+
+        <TextView
+            android:text="0.12元"
+            android:id="@+id/history_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/XXXXX4"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal|bold"
+            android:textSize="16sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="订单状况:"
+            android:background="@color/gold"
+            android:id="@+id/XXXXX5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textStyle="normal|bold"
+            android:textSize="30sp"
+            android:textColor="@color/blue"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:text="已完成"
+            android:background="@color/gray"
+            android:id="@+id/history_text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal|bold"
+            android:textSize="30sp"
+            android:textColor="@color/blue"
+            android:layout_below="@+id/XXXXX5"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:text="还车"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/return_bike_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textSize="30sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

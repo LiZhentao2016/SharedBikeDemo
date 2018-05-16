@@ -28,7 +28,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/bike"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -38,21 +38,31 @@
 
         <service android:name="com.amap.api.location.APSService" />
 
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".function.GetMyLocationActivity"
             android:label="@string/title_activity_get_my_location"
             android:theme="@style/AppTheme" />
         <activity android:name=".function.MyBikeActivity" />
         <activity android:name=".ScanPic" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".userinfo.UserMainActivity" />
+        <activity android:name=".userinfo.MakeMoneyActivity" />
+        <activity android:name=".userinfo.UserInfoActivity" />
+        <activity android:name=".message.MainMessageActivity" />
+        <activity android:name=".message.MainWebActivity" />
+        <activity android:name=".history.MainHistoryActivity" />
+        <activity android:name=".history.MainOrderActivity" />
+        <activity android:name=".userinfo.MainEnrollActivity"></activity>
     </application>
 
 </manifest>

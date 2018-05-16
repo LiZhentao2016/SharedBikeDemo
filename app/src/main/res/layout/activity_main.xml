@@ -18,13 +18,32 @@
                 android:id="@+id/mainMyLocation"
                 style="@style/scanItem"
                 android:layout_marginTop="30dp"
-                android:text="@string/main_activity_title_1" />
+                android:text="@string/main_activity_title_1"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/mainMyBike"
                 style="@style/scanItem"
                 android:layout_marginTop="30dp"
-                android:text="@string/main_activity_title_2" />
+                android:text="共享单车地图" />
+
+            <TextView
+                android:id="@+id/mainHistory"
+                style="@style/scanItem"
+                android:layout_marginTop="30dp"
+                android:text="行程管理" />
+
+            <TextView
+                android:id="@+id/mainUser"
+                style="@style/scanItem"
+                android:layout_marginTop="30dp"
+                android:text="用户中心" />
+
+            <TextView
+                android:id="@+id/mainMessage"
+                style="@style/scanItem"
+                android:layout_marginTop="30dp"
+                android:text="消息中心" />
 
         </LinearLayout>
     </ScrollView>

@@ -58,13 +58,12 @@
                 android:textSize="15sp"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal"
-                android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/loginEditText1"
                 android:hint="（请输入用户名）"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                />
+                android:inputType="textVisiblePassword" />
         </LinearLayout>
 
     <LinearLayout
@@ -136,6 +135,22 @@
     </LinearLayout>
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp">
+        <TextView
+            android:id="@+id/enroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:autoLink="all"
+            android:text="没有账户，注册请点这里！"
+            android:textSize="15sp"
+            android:textColor="@color/red"
+            android:textAlignment="textEnd">
+        </TextView>
+    </RelativeLayout>
 
 
 </LinearLayout>
